@@ -1,0 +1,10 @@
+name: Main Caller Pipeline
+
+on:
+  workflow_dispatch:
+
+jobs:
+  call-the-template:
+    uses: ./.github/workflows/reusable-logic.yml 
+    with:
+      username: "Junior_DevOps"
