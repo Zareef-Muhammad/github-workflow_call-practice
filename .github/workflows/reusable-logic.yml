@@ -1,0 +1,15 @@
+name: My Reusable Template
+
+on:
+  workflow_call: 
+    inputs:
+      username:
+        required: true
+        type: string
+
+jobs:
+  logic-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greet the User
+        run: echo "Hello ${{ inputs.username }}, welcome to the class!"
